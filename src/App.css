@@ -1,0 +1,100 @@
+/* Core Layout Container */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Global Shared Header Formatting */
+.dashboard-header {
+  text-align: center;
+  position: relative;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: var(--text-h);
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  color: var(--text-p);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Fallback/State Text Messaging Elements */
+.no-data {
+  font-style: italic;
+  color: var(--text-p);
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* Shared Generic Form Structures */
+.form-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.job-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 480px;
+  background: var(--social-bg);
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.job-form input,
+.job-form select,
+.job-form textarea {
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--body-bg, #1a1a1a);
+  color: var(--text-h);
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: inherit;
+}
+
+.job-form input:focus,
+.job-form select:focus,
+.job-form textarea:focus {
+  border-color: var(--accent-border);
+}
+
+/* Shared Button Components */
+.submit-btn {
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  margin-top: 8px;
+}
+
+.submit-btn:hover {
+  border-color: var(--accent-border);
+  opacity: 0.9;
+}
+
+.submit-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

@@ -1,0 +1,35 @@
+/* Navigation Return Control Button */
+.back-btn {
+  background: transparent;
+  color: var(--text-p);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+}
+
+.back-btn:hover {
+  background: var(--border);
+  color: var(--text-h);
+}
+
+/* Explicit Inline Input Field Descriptors labels */
+.form-field-label {
+  align-self: flex-start;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-p);
+  margin-bottom: -8px; /* Tightly attaches labels down onto inputs */
+  opacity: 0.8;
+}
+
+/* Deep Note Log Textareas Adjustments */
+.job-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}

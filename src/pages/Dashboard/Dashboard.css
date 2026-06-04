@@ -1,0 +1,168 @@
+/* Section Dividers */
+.applications-section {
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
+}
+
+.applications-section h2 {
+  font-size: 1.8rem;
+  color: var(--text-h);
+  margin-bottom: 20px;
+}
+
+.jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Flat Row Structural Components */
+.job-row {
+  background: var(--social-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.clickable-row {
+  cursor: pointer;
+}
+
+.job-row:hover {
+  background: var(--border);
+}
+
+/* Left Alignment Data Blocks */
+.job-info-main {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex: 2;
+  min-width: 0;
+}
+
+.job-row h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--text-h);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.job-row h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-p);
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Job Hyperlinks Formatting */
+.job-post-link {
+  font-size: 13px;
+  color: var(--accent, #36a2eb);
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+
+.job-post-link:hover {
+  text-decoration: underline;
+}
+
+/* Right Side Positioning Data Boxes */
+.job-meta-side {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.applied-date-label {
+  font-size: 13px;
+  color: var(--text-p);
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+/* Shared Context Status Indicators Badges */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  min-width: 90px;
+}
+
+.status-badge.applied { background: rgba(54, 162, 235, 0.15); color: #36a2eb; }
+.status-badge.interviewing { background: rgba(255, 206, 86, 0.15); color: #ffce56; }
+.status-badge.offered { background: rgba(75, 192, 192, 0.15); color: #4bc0c0; }
+.status-badge.rejected { background: rgba(255, 99, 132, 0.15); color: #ff6384; }
+
+/* Destructive Inline Row Delete Cross Action Trigger */
+.delete-btn {
+  background: transparent;
+  color: var(--text-p);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  line-height: 1;
+  transition: all 0.2s ease;
+  opacity: 0.5;
+}
+
+.delete-btn:hover {
+  background: rgba(255, 99, 132, 0.15);
+  color: #ff6384;
+  opacity: 1;
+}
+
+/* Responsive Dashboard Queries Hooks */
+@media (max-width: 768px) {
+  .job-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .job-info-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .job-meta-side {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    gap: 12px;
+  }
+
+  .delete-btn {
+    padding: 6px 12px;
+    background: rgba(255, 99, 132, 0.08);
+    color: #ff6384;
+    opacity: 1;
+  }
+}
